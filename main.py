@@ -1,4 +1,4 @@
-from art import *
+from art import logo, vs
 from data import data
 import random
 import os
