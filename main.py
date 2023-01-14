@@ -3,7 +3,8 @@ from data import data
 import random
 import os
 
-def check_answer(account_a,account_b,answer,score): #Checks user response and scores
+def check_answer(account_a,account_b,answer,score):
+    """Checks the user's response and calculates scores, also displays them"""
     #clear the screen :
     os.system('cls') 
     print(logo)
@@ -21,7 +22,9 @@ def check_answer(account_a,account_b,answer,score): #Checks user response and sc
         print(f"Wrong answer, Your final score : {score} ") #show the final score
         return #the user loses ==> exit the game
 
-def game(account_a = random.choice(data), score = 0): # Default: begins with assigning a random value to account_a from the data , and begins with score = 0
+def game(account_a = random.choice(data), score = 0): 
+    """The main game, generates random values and asks the user for input
+    -Default: begins with assigning a random value to account_a from the data , and begins with score = 0 """
     account_b = random.choice(data) # choosing a random value for account_b
     if account_a == account_b:
         account_b = random.choice(data)
