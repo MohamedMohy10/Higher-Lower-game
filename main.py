@@ -3,6 +3,7 @@ from data import data
 import random
 import os
 
+
 def check_answer(account_a,account_b,answer,score):
     """Checks the user's response and calculates scores, also displays them"""
     #clear the screen :
@@ -21,6 +22,7 @@ def check_answer(account_a,account_b,answer,score):
     else: #wrong answer
         print(f"Wrong answer, Your final score : {score} ") #show the final score
         return #the user loses ==> exit the game
+    
 
 def game(account_a = random.choice(data), score = 0): 
     """The main game, generates random values and asks the user for input
